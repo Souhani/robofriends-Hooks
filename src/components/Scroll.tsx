@@ -1,9 +1,8 @@
-import React from 'react';
-
-const Scroll = (proos) => {
-
+type ScrollProps = {
+   children: JSX.Element;
+}
+const Scroll = (proos:ScrollProps) => {
 	return(
-
 	<div  style={{ overflowY: 'scroll', border: '1px solid black', height:'800px'}}>
      {proos.children}
     </div>

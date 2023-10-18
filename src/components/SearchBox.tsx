@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
-const SearchBox = ({onSearch}) => {
+type searchBoxProps = {
+	onSearch : (event: ChangeEvent<HTMLInputElement>) => void,
+}
+
+const SearchBox = ({onSearch}: searchBoxProps) => {
 
 	return(
 
@@ -9,7 +13,7 @@ const SearchBox = ({onSearch}) => {
 	      type ='search' 
 	      placeholder = 'search robots'
           onChange = {onSearch}
-	      / >
+	      />
 	    </div>
 		)
 };
